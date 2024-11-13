@@ -1,0 +1,2 @@
+module MonstersExtendedHelper
+end

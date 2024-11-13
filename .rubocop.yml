@@ -1,0 +1,60 @@
+AllCops:
+  # Set the Ruby version you are targeting:
+  TargetRubyVersion: 3.2.2
+  NewCops: enable
+
+  # Exclude files that shouldn't be inspected
+  Include:
+    - '**/*extended*'
+    - '**/*Extended*'
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'app/assets/**/*'
+    - 'app/channels/**/*'
+    - 'app/helpers/**/*'
+    - 'app/javascript/**/*'
+    - 'app/jobs/**/*'
+    - 'app/mailers/**/*'
+    - 'app/services/**/*'
+    - 'app/views/**/*'
+    - 'test/**/*'
+
+# Limit lines to a readable length.
+Layout/LineLength:
+  Max: 100
+  Exclude:
+    - 'spec/**/*'  # Allow longer lines in specs
+
+# Recommend {} for single-line blocks & do..end for multi-line blocks.
+Style/BlockDelimiters:
+  EnforcedStyle: line_count_based
+
+# Use double quotes for strings.
+#tyle/StringLiterals:
+#  EnforcedStyle: double_quotes
+
+# Documentation comments are not required.
+Style/Documentation:
+  Enabled: false
+
+# Avoid using the `for` keyword, prefer `each`.
+Style/For:
+  Enabled: true
+
+# Prefer `&&` and `||` over `and` and `or`.
+Style/AndOr:
+  EnforcedStyle: conditionals
+
+Naming/VariableName:
+  Enabled: false
+
+Naming/MethodParameterName:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
